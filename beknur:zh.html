@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Бекнұр & Жанерке | Свадебное приглашение</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff4ef;
+      color: #2c1a1a;
+      text-align: center;
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('259A8080_resized.jpg') center/cover no-repeat;
+      color: white;
+      padding: 80px 15px 50px;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      font-weight: 300;
+      margin: 0 auto;
+      max-width: 90%;
+    }
+
+    section {
+      padding: 30px 15px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8em;
+      color: #b1465b;
+      margin-bottom: 20px;
+    }
+
+    .timer {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #803542;
+      margin: 15px 0;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
+      background-color: #b1465b;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1em;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .schedule {
+      margin-top: 40px;
+      background-color: #fdf6f4;
+      border-radius: 15px;
+      padding: 25px 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .schedule h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5em;
+      color: #b1465b;
+      margin-bottom: 20px;
+    }
+
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: 80px auto;
+      gap: 10px 16px;
+      text-align: left;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .schedule-time {
+      background-color: #e5c7c1;
+      color: #803542;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 0.95em;
+    }
+
+    .schedule-event {
+      color: #5e2e38;
+      font-size: 0.95em;
+      display: flex;
+      align-items: center;
+    }
+
+    .gallery {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      aspect-ratio: 3 / 2;
+      margin: 0 auto;
+      overflow: hidden;
+      border: 6px solid #e5c7c1;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gallery img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1.5s ease, filter 1.5s ease;
+      filter: blur(8px);
+      background-color: #ffffff;
+      padding: 5px;
+    }
+
+    .gallery img.active {
+      opacity: 1;
+      filter: blur(0);
+      position: absolute;
+    }
+
+    footer {
+      background-color: #f2e6e4;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    #music-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #b1465b;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-size: 0.9em;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2.2em;
+      }
+      header p {
+        font-size: 1em;
+      }
+      .gallery {
+        aspect-ratio: 4 / 3;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Бекнұр & Жанерке</h1>
+    <p>Самые важные моменты жизни — рядом с близкими.</p>
+    Мы хотим разделить этот день с тобой.</p>
+  </header>
+
+  <section>
+    <h2>Приглашение</h2>
+    <p>
+      <strong>Дата:</strong> 21 сентября 2025<br>
+      <strong>Время:</strong> 15:00<br>
+      <strong>Место:</strong> Первомайские пруды, Ресторан Club House
+
+    </p>
+    <a href="https://prudi.kz/contacts" target="_blank" class="button">Как добраться?</a>
+
+    <div class="schedule">
+      <h3>Программа дня</h3>
+      <div class="schedule-grid">
+        <div class="schedule-time">15:00</div><div class="schedule-event">Фуршет 🍸</div>
+        <div class="schedule-time">16:00</div><div class="schedule-event">Беташар 👰</div>
+        <div class="schedule-time">17:30</div><div class="schedule-event">Церемония бракосочетания 💫 </div>
+        <div class="schedule-time">18:30</div><div class="schedule-event">Банкет 🌟</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>До свадьбы осталось</h2>
+    <div class="timer" id="countdown">Загрузка...</div>
+  </section>
+
+  <section>
+    <h2>Галерея</h2>
+    <div class="gallery">
+        <img src="259A6371_resized.jpg" alt="Пара в саду" class="active">
+        <img src="259A6391_resized.jpg" alt="Жанерке с цветами">
+        <img src="259A6421_resized.jpg" alt="Бекнур с букетом">
+        <img src="259A6799_resized.jpg" alt="Бекнур с букетом">
+        <img src="259A6870_resized.jpg" alt="Бекнур с букетом">
+        <img src="259A6886_resized.jpg" alt="Бекнур с букетом">
+        <img src="259A7063_resized.jpg" alt="Бекнур с букетом">
+        <img src="259A7300_resized.jpg" alt="Бекнур с букетом">
+        <img src="259A7391_resized.jpg" alt="Бекнур с букетом">
+        <img src="259A7617_resized.jpg" alt="Бекнур с букетом">
+            <img src="259A7713_resized.jpg" alt="Бекнур с букетом">
+                <img src="259A7873_resized.jpg" alt="Бекнур с букетом">
+                    <img src="259A7916_resized.jpg" alt="Бекнур с букетом">
+                        <img src="259A7941_resized.jpg" alt="Бекнур с букетом">
+                            <img src="259A8080_resized.jpg" alt="Бекнур с букетом">
+                                <img src="259A8144_resized.jpg" alt="Бекнур с букетом">
+                                    <img src="259A8209 копия 4_resized.jpg" alt="Бекнур с букетом">
+                                        <img src="259A8245_resized.jpg" alt="Бекнур с букетом">
+
+    </div>
+  </section>
+
+  <footer>
+    С любовью, Бекнұр & Жанерке ❤️
+  </footer>
+
+  <audio id="bg-music" autoplay muted loop>
+    <source src="bg-music.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает аудио.
+  </audio>
+  <button onclick="toggleMusic()" id="music-btn">⏸ Музыка</button>
+
+  <script>
+    const countdown = document.getElementById("countdown");
+    const weddingDate = new Date("2025-09-21T13:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+      if (distance < 0) {
+        countdown.innerText = "Свадьба уже состоялась!";
+        return;
+      }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdown.innerText = `${days} дн. ${hours} ч. ${minutes} мин. ${seconds} сек.`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    const galleryImages = document.querySelectorAll('.gallery img');
+    let currentIndex = 0;
+
+    function showNextImage() {
+      galleryImages[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % galleryImages.length;
+      galleryImages[currentIndex].classList.add('active');
+    }
+
+    setInterval(showNextImage, 3000);
+
+    const music = document.getElementById('bg-music');
+    const btn = document.getElementById('music-btn');
+
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+        btn.innerText = "⏸ Музыка";
+      } else {
+        music.pause();
+        btn.innerText = "▶ Музыка";
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      music.muted = false;
+      const playPromise = music.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(err => {
+          console.warn('Автовоспроизведение заблокировано:', err);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
